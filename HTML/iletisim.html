@@ -1,0 +1,128 @@
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Css -->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.css">
+	<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+
+	<!-- Javascript -->
+
+	<title>İletişim</title>
+</head>
+
+<body>
+	<!-- Javascript -->
+	<script src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="bootstrapt1/js/bootstrap.js"></script>
+
+	<!-- Mobil Uyumluluk için nav etiketleri kullanıldı -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">HUSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbarNavAltMarkup" >
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="index.html">Ana Sayfa <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="ozgecmis.html">Özgeçmiş</a>
+        <a class="nav-item nav-link" href="sehrim.html">İstanbul</a>
+        <a class="nav-item nav-link " href="mirasimiz.html">Mirasımız</a>
+        <a class="nav-item nav-link " href="ilgialanlarim.html">İlgi Alanlarım</a>
+        <a class="nav-item nav-link " href="iletisim.html">İletişim</a>
+      </div>
+     
+    </div>
+    <ul class="nav navbar-nav mr-auto collapse navbar-collapse navbarNavAltMarkup">
+        
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+        </svg></span> Login</i></a></li>
+        
+      </ul>
+  </nav>
+	<main>
+
+		<div class="container İletişim">
+
+			<form action="iletisimbilgi.php" method="post" name="Form" onsubmit="return control1()">
+				<!--control() fonksiyonumuzu çağırdık-->
+				<!--Formlarla iletişim kısımlarını oluşturdum-->
+				<div class="form-group">
+					<label for="name" style="color: red;">İsim</label>
+					<input type="text" name="isim" class="form-control" placeholder="İsminizi Girin">
+					<small class="form-text text-muted">Zorunlu </small>
+				</div>
+
+				<div class="form-group">
+					<label for="email" style="color: red;">Email</label>
+					<input type="email" name="email" class="form-control" placeholder="Emailinizi girin.">
+					<small class="form-text text-muted">Zorunlu </small>
+				</div>
+				<div class="form-group ">
+					<label class="col-3 col-form-label sehir" style="color: red;">Şehir </label>
+					<div class="col-9">
+						<select name="sehir" class="form-control">
+							<option>İstanbul</option>
+							<option>Ankara</option>
+							<option>İzmir</option>
+							<option>Konya</option>
+							<option selected>Sakarya</option>
+							<option>Gümüşhane</option>
+							<option>Trabzon</option>
+							<option>Sivas</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group ">
+					<label class="col-3 col-form-label insan" style="color: red;">Cinsiyet </label>
+					<div class="col-9">
+						<div style="color: slategrey;">
+							<input type="radio" id="kadın" name="cinsiyet" value="kadın"> Kadın
+							<input type="radio" id="erkek" name="cinsiyet" value="erkek"> Erkek
+							<br><small class="form-text text-muted">Zorunlu </small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="message" style="color: red;">Mesaj</label>
+					<textarea name="oneri" id="oneri" rows="5" class="form-control"></textarea>
+				</div>
+
+				<button class="btn btn-danger" type="reset" id="submit" name="submit" value="Reset"
+					onclick="check()">Temizle</button>
+
+				<button class="btn btn btn-danger" type="submit" id="sub">Gönder</button>
+
+				<br><br><br>
+
+			</form>
+
+		</div>
+
+	</main>
+	
+	<script src="form.js"></script>
+	<!-- BOOTSTRAP -->
+  
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
